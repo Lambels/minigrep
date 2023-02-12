@@ -16,7 +16,11 @@ impl<'a> Worker<'a> {
         Worker { data, search_term }
     }
 
-    pub fn run<T: Write>(&self, case_sensitive: bool, out: &mut T) -> Result<usize, Box<dyn Error>> {
+    pub fn run<T: Write>(
+        &self,
+        case_sensitive: bool,
+        out: &mut T,
+    ) -> Result<usize, Box<dyn Error>> {
         write!(
             out,
             "------- Running Match Case: \"{}\" -------\n",
@@ -92,9 +96,5 @@ impl<'a> Display for Match<'a> {
         )
     }
 }
-
-
-
-
 
 // FIRST 100 LINES!!111! 🦀🦀🦀🥳🥳🥳🥳🥳🥳🥳🥳🥳🥳🥳🥳🥳🥳🥳🥳 (cc: T-Dark#9470)
